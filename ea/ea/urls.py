@@ -22,5 +22,9 @@ from . import views as root_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.LoginView.as_view()),
-    path('first/', root_views.first)
+    path('loggingin/', root_views.login, name='landing'),
+    path('register/', root_views.register_user, name='register'),
+    path('loggedin/', root_views.loggedin, name='loggedin'),
+    path('home/', root_views.home, name='home'),
+    path('auth/', root_views.auth_view, name='auth_view'),
 ]
